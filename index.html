@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Martins - Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+
+            <h1>Thiago Martins de Freitas</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#about">Sobre Mim</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Olá, bem-vindo ao meu portfólio!</h2>
+            <p>Sou um(a) desenvolvedor(a) web apaixonado(a) por criar experiências incríveis.</p>
+            <a href="#portfolio" class="btn">Veja meu portfólio</a>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Meu Portfólio</h2>
+            <div class="grid">
+               
+                <div class="project">
+                    <img src="Damas.png" alt="Projeto Dama">
+                    <h3>Jogo de Damas</h3>
+                    <p>Jogo de Damas feito completamente em JAVA no console.</p>
+                    <a href="https://github.com/Furbim/CheckersGame" class="btn">Saiba mais</a>
+                </div>
+                <div class="project">
+                    <img src="Nutrocean.png" alt="Projeto Nutrocean">
+                    <h3>Site Nutrocean</h3>
+                    <p>Site desenvolvido para uma olimpíada na qual ficamos no Top 15..</p>
+                    <a href="https://nutrocean.com.br" class="btn">Saiba mais</a>
+                </div>
+                <div class="project">
+                    <img src="Tabela.png" alt="Projeto Tabela periódica">
+                    <h3>Tabela Periódica</h3>
+                    <p>Tabela Periódica desenvolvida com apenas Table no começo do ano.</p>
+                    <a href="https://furbim.github.io/Tabela/" class="btn">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <div class="about-content">
+                <div id="img"><img src="perfil.jpeg" alt="Sua foto"></div>
+                <p>Meu nome é Thiago Martins de Freitas, tenho 16 anos e estou cursando <br> Desenvolvimento de Sistemas no
+                    Cotemig e Programação Web no Senai.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form action="enviar.php" method="POST">
+                <input type="text" name="nome" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu Email" required>
+                <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <ul class="social-icons">
+                <li><a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/Furbim" target="_blank"><i class="fa fa-github"></i></a></li>
+                
+            </ul>
+            <p>&copy; 2024 Thiago Martins de Freitas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
