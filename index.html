@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial</title>
-    <link rel="stylesheet" media="screen and (min-width: 900px)" href="style.css">
-    <link rel="stylesheet" media="screen and (max-width: 899px)" href="smallscreen.css">
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="./css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 899px)" href="./css/smallscreen.css">
 </head>
 
 <body>
@@ -21,9 +21,9 @@
                     <ul>
                         <li><a href="#home">HOME</a></li>
                         <li><a href="#sobre">SOBRE MIM</a></li>
-                        <li><a href="">PORTFÓLIO</a></li>
-                        <li><a href="">CONTATO</a></li>
-                        <li><img width="30px" id="idioma" onclick="mudarIdioma()" src="/img/english.png" alt=""></li>
+                        <li><a href="#portfolio">PORTFÓLIO</a></li>
+                        <li><a href="#contato">CONTATO</a></li>
+                        <li><img width="30px" id="idioma" onclick="mudarIdioma()" src="../img/english.png" alt=""></li>
                         <li></li>
                     </ul>
                 </nav>
@@ -51,7 +51,7 @@
                     </button>
                 </div>
                 <div id="right">
-                    <img width="90%" src="/img/tecnologia.png" alt="">
+                    <img width="90%" src="../img/tecnologia.png" alt="">
 
                 </div>
             </section>
@@ -90,11 +90,11 @@
 
             </section>
             <section id="portfolio">
-                <div id="left"></div>
-                <h1>Portfólio</h1>
-                <hr>
 
-                <h1>Drag the cards to move them</h1>
+                <div>
+                    <h1 id="titulo">Portfólio</h1>
+                    <hr>
+                </div>
 
                 <div class="container">
                     <div class="card-carousel">
@@ -121,10 +121,22 @@
                     </div>
                     <a href="#" class="visuallyhidden card-controller">Carousel controller</a>
                 </div>
-                <!-- 
-<h2>Check out <a target="_blank" href="https://codepen.io/WillyW/pen/RwRrvjv">Circle Carousel</a></h2> -->
+                <h1 id="arrasta">Arraste para movê-los</h1>
+
+            </section>
+            <section id="contato">
+                <div>
+                    <h1>Contato</h1>
+                    <hr>
+                </div>
+
+                <form action="">
+
+                </form>
+
             </section>
         </main>
+        <footer></footer>
     </div>
     <script>
         let menu = document.getElementById("menu");
@@ -138,15 +150,16 @@
             let idioma = document.getElementById("idioma");
 
             if (idioma.src.includes("english")) {
-                idioma.src = "/img/portuguese.png";
+                idioma.src = "../img/portuguese.png";
             } else {
-                idioma.src = "/img/english.png";
+                idioma.src = "../img/english.png";
             }
         }
 
 
 
     </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="script.js"></script>
 </body>
 
