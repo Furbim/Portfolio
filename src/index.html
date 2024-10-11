@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="./css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 899px)" href="./css/smallscreen.css">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div id="container_header">
+                <div id="logo">
+                    <h1>Thiago Freitas</h1>
+
+                </div>
+                <nav class="animation">
+                    <ul>
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#sobre">SOBRE MIM</a></li>
+                        <li><a href="#portfolio">PORTFÓLIO</a></li>
+                        <li><a href="#contato">CONTATO</a></li>
+                        <li><img width="30px" id="idioma" onclick="mudarIdioma()" src="../img/english.png" alt=""></li>
+                        <li><button onclick="toggleMode()" ><img id="mode" src="../img/moon.png" alt=""></button></li>
+                    </ul>
+                </nav>
+                <svg id="menu" xmlns="http://www.w3.org/2000/svg" width="3.5em" height="3.5em" viewBox="0 0 24 24">
+                    <path fill="white" d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z" />
+                </svg>
+            </div>
+        </header>
+
+        <main>
+            <section id="home">
+                <div id="left">
+                    <div id="title">
+                        <h1>Olá, eu sou </h1>
+                    </div>
+                    <div id="log"></div>
+
+                    <h1>Sou desenvolvedor Full Stack</h1>
+
+                    <button>
+                        Visitar GitHub <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                            viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M9 17.192V6.808L17.154 12z" />
+                        </svg>
+                    </button>
+                </div>
+                <div id="right">
+                    <img width="90%" src="../img/tecnologia.png" alt="">
+
+                </div>
+            </section>
+            <section id="sobre">
+                <div id="left">
+                    <h1>Competências</h1>
+                    <hr>
+                    <div class="carousel">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                </div>
+                <div id="right">
+                    <div id="titulo">
+                        <h1>Sobre Mim</h1>
+                    </div>
+                    <hr>
+
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam aspernatur expedita omnis!
+                        Voluptatum cum dicta quis dolore animi omnis odit dolorem sed beatae! Id cum reiciendis, iure
+                        harum labore facere! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, totam!
+                        Omnis, ipsam? Nostrum similique quasi optio molestias, non odio sequi quidem cum doloremque
+                        rerum inventore vel earum molestiae. Odit, odio.
+                    </p>
+
+                    <button>
+                        Visitar Linkedin <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                            viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M9 17.192V6.808L17.154 12z" />
+                        </svg>
+                    </button>
+                </div>
+
+            </section>
+            <section id="portfolio">
+
+                <div>
+                    <h1 id="titulo">Portfólio</h1>
+                    <hr>
+                </div>
+
+                <div class="container">
+                    <div class="card-carousel">
+                        <div class="card" id="1">
+                            <div class="image-container"></div>
+                            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
+                        </div>
+                        <div class="card" id="2">
+                            <div class="image-container"></div>
+                            <p>2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
+                        </div>
+                        <div class="card" id="3">
+                            <div class="image-container"></div>
+                            <p>3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
+                        </div>
+                        <div class="card" id="4">
+                            <div class="image-container"></div>
+                            <p>4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
+                        </div>
+                        <div class="card" id="5">
+                            <div class="image-container"></div>
+                            <p>5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
+                        </div>
+                    </div>
+                    <a href="#" class="visuallyhidden card-controller">Carousel controller</a>
+                </div>
+                <h1 id="arrasta">Arraste para movê-los</h1>
+
+            </section>
+            <section id="contato">
+                <div>
+                    <h1>Contato</h1>
+                    <hr>
+                </div>
+
+                <div class="login-box">
+
+                    <form>
+                        <div id="duas">
+                            <div class="user-box">
+                                <input type="text" name="nome" required>
+                                <label>Nome</label>
+                            </div>
+                            <div class="user-box">
+                                <input type="text" wrap="hard" name="sobrenome" required>
+                                <label>Sobrenome</label>
+                            </div>
+                        </div>
+
+                        <div class="user-box">
+                            <input type="email" name="email" required>
+                            <label>Email</label>
+                        </div>
+
+                        <div class="user-box">
+                            <textarea minlength="2" name="" id="" cols="30" rows="10" required></textarea>
+                            <label>Email</label>
+                        </div>
+                        <button class="custom-btn btn-1">Read More</button>
+                    </form>
+                </div>
+
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>company</h4>
+                        <ul>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">our services</a></li>
+                            <li><a href="#">privacy policy</a></li>
+                            <li><a href="#">affiliate program</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>get help</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">shipping</a></li>
+                            <li><a href="#">returns</a></li>
+                            <li><a href="#">order status</a></li>
+                            <li><a href="#">payment options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>online shop</h4>
+                        <ul>
+                            <li><a href="#">watch</a></li>
+                            <li><a href="#">bag</a></li>
+                            <li><a href="#">shoes</a></li>
+                            <li><a href="#">dress</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </footer>
+    </div>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
