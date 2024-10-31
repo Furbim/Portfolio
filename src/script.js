@@ -471,7 +471,7 @@ async function mudarIdioma() {
   document.querySelector(".footer-col #navContato").textContent = texts[currentLanguage].navContato;
 
 
-  idioma.src = currentLanguage === 'pt' ? "../img/portuguese.png" : "../img/english.png";
+  idioma.src = currentLanguage === 'pt' ? "./img/portuguese.png" : "./img/english.png";
 }
 
 
