@@ -105,13 +105,13 @@ header {
 
                 }
 
-                & li button{
+                & li button {
                     width: 30px;
                     height: 30px;
                     background-color: transparent;
                     border: none;
 
-                    & img{
+                    & img {
                         width: 30px;
                     }
                 }
@@ -134,6 +134,75 @@ header {
 
     to {
         transform: rotate(360deg);
+    }
+}
+
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
+    header #container_header #logo {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+    }
+
+    header #container_header nav ul {
+        width: 100%;
+    }
+
+    header #container_header nav ul li a {
+        font-size: clamp(0.8rem, 2vw, 1rem);
+    }
+}
+
+/* Responsividade para telas pequenas (celulares) */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        flex-direction: column;
+        position: static;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    header #container_header {
+        flex-direction: column;
+    }
+
+    header #container_header #logo h1 {
+        font-size: clamp(1.2rem, 4vw, 2rem);
+        text-align: center;
+    }
+
+    header #container_header nav {
+        width: 100%;
+    }
+
+    header #container_header nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    header #container_header nav ul li {
+        margin-bottom: 0.5rem;
+    }
+
+}
+
+/* Responsividade para telas muito pequenas (por exemplo, 480px) */
+@media (max-width: 480px) {
+    header #container_header #logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    header #container_header nav ul {
+        width: 100%;
+    }
+
+    header #container_header nav ul li a {
+        font-size: clamp(0.6rem, 2.5vw, 0.8rem);
     }
 }
 
@@ -188,6 +257,9 @@ main {
                 font-weight: 400;
                 font-family: "Sen", "sans-serif";
             }
+            & a{
+                text-decoration: none;
+            }
 
             & button {
                 border-radius: .25rem;
@@ -199,7 +271,7 @@ main {
                 font-weight: 600;
                 padding-left: 25px;
                 padding-right: 25px;
-                color: var(--text-color);
+                color: white;
                 -webkit-clip-path: polygon(0 0, 0 0, 100% 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 100%);
                 clip-path: polygon(0 0, 0 0, 100% 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 100%);
                 height: 40px;
@@ -231,6 +303,87 @@ main {
             justify-content: center;
             height: 100%;
 
+        }
+    }
+
+    /* Responsividade para tablets */
+    @media (max-width: 1024px) {
+        #home {
+            flex-direction: column;
+            align-items: center;
+            height: 50vh;
+            margin: 0;
+            width: 100%;
+        }
+
+        #home #left {
+            width: 80%;
+            align-items: start;
+            text-align: center;
+        }
+
+        #home #left #title h1 {
+            margin-top: 10vh;
+            font-size: clamp(1rem, 3vw, 1.4rem);
+        }
+
+        #home #left h1 {
+            margin: 0;
+
+            font-size: clamp(1rem, 3vw, 1.4rem);
+        }
+
+        #home #left #log {
+            font-size: clamp(2rem, 3vw, 2.5rem);
+        }
+
+        #home #left button {
+            width: auto;
+            padding: 10px 20px;
+        }
+
+        #home #right {
+            display: none;
+        }
+    }
+
+    /* Responsividade para telas pequenas (celulares) */
+    @media (max-width: 768px) {
+        #home {
+            height: 50vh;
+            padding: 0;
+        }
+
+        #home #left #title h1,
+        #home #left #log,
+        #home #left h1 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+        }
+
+        #home #left button {
+            font-size: 0.8rem;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    /* Responsividade para telas muito pequenas (por exemplo, 480px) */
+    @media (max-width: 480px) {
+        #home {
+            height: 50vh;
+            padding: 0;
+        }
+
+        #home #left #title h1,
+        #home #left h1,
+        #home #left #log {
+            font-size: 1rem;
+        }
+
+        #home #left button {
+            padding-left: 15px;
+            padding-right: 15px;
+            font-size: 0.7rem;
         }
     }
 
@@ -277,6 +430,10 @@ main {
                 font-family: "Sen", "sans-serif";
             }
 
+            & a{
+                text-decoration: none;
+            }
+
             & button {
                 border-radius: .25rem;
                 display: flex;
@@ -287,7 +444,7 @@ main {
                 font-weight: 600;
                 padding-left: 25px;
                 padding-right: 25px;
-                color: rgb(22, 22, 22);
+                color: white;
                 -webkit-clip-path: polygon(0 0, 0 0, 100% 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 100%);
                 clip-path: polygon(0 0, 0 0, 100% 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 100%);
                 height: 40px;
@@ -347,12 +504,16 @@ main {
                 width: 350px;
                 height: 100px;
                 padding: 20px;
+                border: solid 1px var(--highlight-color);
                 text-align: center;
                 font-family: "Sen", "Sans-serif";
                 opacity: 0;
                 color: var(--card-text-color);
                 will-change: transform, opacity;
                 animation: carousel 15s linear infinite;
+                box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+                7px 7px 20px 0px rgba(0, 0, 0, .1),
+                4px 4px 5px 0px rgba(0, 0, 0, .1);
                 /* duration should be 3 multiplied by the total number of cards */
             }
 
@@ -379,8 +540,114 @@ main {
         }
     }
 
+    /* Responsividade para tablets */
+    @media (max-width: 1024px) {
+        #sobre {
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            padding: 0;
+            width: 100%;
+        }
+
+        #sobre #left {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #sobre #right {
+            width: 90%;
+            text-align: center;
+            align-items: center;
+        }
+
+        #sobre #right #titulo h1 {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+        }
+
+        #sobre #right hr {
+            width: 10vw;
+        }
+
+        #sobre #right p {
+            width: 100%;
+            font-size: clamp(0.8rem, 3vw, 1rem);
+        }
+
+        #sobre #left h1 {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            transform: none;
+            margin-top: 20px;
+        }
+
+        #sobre #left hr {
+            height: 2px;
+            width: 70%;
+            margin: 0 auto 15vh;
+        }
+
+
+        #sobre .carousel {
+            width: 100%;
+        }
+    }
+
+    /* Responsividade para telas pequenas (celulares) */
+    @media (max-width: 768px) {
+
+        #sobre #right #titulo h1 {
+            font-size: clamp(1.2rem, 4vw, 2rem);
+        }
+
+        #sobre #right p {
+            font-size: clamp(0.7rem, 3vw, 0.9rem);
+        }
+
+        #sobre #right button {
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 0.8rem;
+        }
+
+        #sobre #left .card {
+            width: 80%;
+            font-size: 0.8rem;
+            padding: 15px;
+        }
+    }
+
+    /* Responsividade para telas muito pequenas (por exemplo, 480px) */
+    @media (max-width: 480px) {
+
+
+        #sobre #right #titulo h1 {
+            font-size: 1.5rem;
+        }
+
+        #sobre #right p {
+            font-size: 0.7rem;
+        }
+
+        #sobre #left h1 {
+            font-size: 1.2rem;
+            transform: none;
+        }
+
+        #sobre .carousel {
+            width: 100%;
+            flex-direction: column;
+        }
+
+        #sobre #left .card {
+            width: 90%;
+            font-size: 0.7rem;
+            padding: 10px;
+        }
+    }
+
+
     & #portfolio {
-        height: 90vh;
+        height: 100vh;
         display: flex;
         justify-content: start;
         flex-direction: column;
@@ -388,7 +655,8 @@ main {
         width: 92%;
         padding: 0 4%;
         max-width: 1450px;
-        
+        margin-top: 10vh;
+
 
 
 
@@ -421,7 +689,7 @@ main {
         }
 
         & .container {
-            height: 65%;
+            height: 70%;
             overflow: hidden;
             padding: 20px;
             margin-top: 2em;
@@ -448,7 +716,7 @@ main {
 
             @media screen and (max-width: 640px) {
                 .card-carousel {
-                    margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2)
+                    margin-left: calc((95vw - var(--carousel-min-width) - 40px) / 2)
                 }
             }
 
@@ -505,7 +773,7 @@ main {
                 }
 
                 & h2 {
-                    padding: 1em;
+                    padding: 1em;   
                     margin-top: 1em;
                     background: rgba(0, 0, 0, .3);
                     text-align: center;
@@ -557,6 +825,93 @@ main {
 
     }
 
+    /* Responsividade para tablets */
+    @media (max-width: 1024px) {
+        #portfolio {
+            height: 80vh;
+        }
+
+        #portfolio #titulo {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            margin-top: 8vh;
+        }
+
+        #portfolio .container {
+            width: 90%;
+            margin-top: 1em;
+        }
+
+        .card-carousel .card {
+            width: 90%;
+
+            font-size: 0.9rem;
+        }
+
+        .card-carousel .card .image-container {
+            width: 6em;
+            height: 6em;
+        }
+    }
+
+    /* Responsividade para dispositivos móveis */
+    @media (max-width: 768px) {
+
+
+        #portfolio #titulo {
+            font-size: 1.8rem;
+            margin-top: 5vh;
+        }
+
+        #portfolio #arrasta {
+            font-size: 1rem;
+            margin-bottom: 3vh;
+        }
+
+        .card-carousel .card {
+            width: 200px;
+            min-width: 180px;
+        }
+
+        .card-carousel .card h2 {
+            padding: 0.5em;
+            font-size: 1rem;
+        }
+    }
+
+    /* Responsividade para dispositivos móveis pequenos (ex: 480px) */
+    @media (max-width: 480px) {
+
+
+        #portfolio #titulo {
+            font-size: 1.5rem;
+            margin-top: 3vh;
+        }
+
+        .card-carousel {
+            width: 100%;
+            flex-direction: column;
+        }
+
+        .card-carousel .card {
+            width: 180px;
+            min-width: 150px;
+            font-size: 0.8rem;
+
+        }
+
+        .card-carousel .card .image-container {
+            width: 5em;
+            height: 5em;
+            margin-bottom: 1em;
+        }
+
+        .card-carousel .card h2 {
+            font-size: 0.9rem;
+            padding: 0.3em;
+        }
+    }
+
+
     & #contato {
         height: 100vh;
         display: flex;
@@ -564,9 +919,9 @@ main {
         flex-direction: column;
         align-items: center;
         width: 92%;
-        padding: 0 4%;
+
         max-width: 1450px;
-        
+
 
         & h1 {
             color: var(--text-color);
@@ -586,7 +941,7 @@ main {
 
             width: 600px;
             padding: 40px;
-            margin-top: 5vh;
+            margin: 5vh 0;
             background: var();
             box-sizing: border-box;
             box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
@@ -633,7 +988,7 @@ main {
 
                 & .btn-1 {
                     background: rgb(96, 9, 240);
-                    background: linear-gradient(79.63deg, rgb(30, 58, 138)  12.08%, rgb(0, 178, 255) 216.5%);
+                    background: linear-gradient(79.63deg, rgb(30, 58, 138) 12.08%, rgb(0, 178, 255) 216.5%);
                     border: none;
                     color: white;
                 }
@@ -745,93 +1100,191 @@ main {
 
 
     }
+
+    /* Responsividade para tablets */
+    @media (max-width: 1024px) {
+        #contato {
+            height: auto;
+
+        }
+
+        #contato h1 {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            margin-top: 10vh;
+        }
+
+        .login-box {
+            max-width: 95%;
+            width: 500px;
+            padding: 20px 2%;
+        }
+
+        .login-box form #duas .user-box {
+            width: 100%;
+        }
+
+        .custom-btn {
+            width: 100%;
+            max-width: 200px;
+        }
+    }
+
+    /* Responsividade para dispositivos móveis */
+    @media (max-width: 768px) {
+
+
+        #contato h1 {
+            font-size: 1.8rem;
+            margin-top: 5vh;
+        }
+
+        .login-box {
+            padding: 20px 2%;
+        }
+
+        .login-box .user-box input,
+        .login-box .user-box textarea {
+            font-size: 14px;
+            padding: 8px 0;
+        }
+
+        .custom-btn {
+            width: 100%;
+            max-width: 150px;
+            font-size: 0.9rem;
+        }
+    }
+
+    /* Responsividade para dispositivos móveis pequenos (ex: 480px) */
+    @media (max-width: 480px) {
+
+
+        #contato h1 {
+            font-size: 1.5rem;
+            margin-top: 3vh;
+        }
+
+        .login-box {
+            padding: 20px 2%;
+        }
+
+        .login-box .user-box input,
+        .login-box .user-box textarea {
+            font-size: 12px;
+            padding: 6px 0;
+        }
+
+        .custom-btn {
+            width: 100%;
+            max-width: 120px;
+            font-size: 0.8rem;
+        }
+
+        /* Ajusta o espaçamento entre as caixas */
+        .login-box .user-box {
+            margin-bottom: 20px;
+        }
+    }
+
 }
 
 
-.container{
+.container {
 
-	margin:auto;
+    margin: auto;
 }
-.row{
-	display: flex;
-	flex-wrap: wrap;
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
-ul{
-	list-style: none;
+
+ul {
+    list-style: none;
 }
-.footer{
+
+.footer {
     width: 100%;
-	background-color: rgb(44, 44, 44);
+    background-color: rgb(44, 44, 44);
     padding: 70px 0;
 }
-.footer-col{
-   width: 22%;
-   padding: 0 15px;
+
+.footer-col {
+    width: 22%;
+    padding: 0 15px;
 }
-.footer-col h4{
-	font-size: 18px;
-	color: #ffffff;
-	text-transform: capitalize;
-	margin-bottom: 35px;
-	font-weight: 500;
-	position: relative;
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
 }
-.footer-col h4::before{
-	content: '';
-	position: absolute;
-	left:0;
-	bottom: -10px;
-	background-color: var(--highlight-color);
-	height: 2px;
-	box-sizing: border-box;
-	width: 50px;
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: var(--highlight-color);
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
 }
-.footer-col ul li:not(:last-child){
-	margin-bottom: 10px;
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
 }
-.footer-col ul li a{
-	font-size: 16px;
-	text-transform: capitalize;
-	color: #ffffff;
-	text-decoration: none;
-	font-weight: 300;
-	color: #bbbbbb;
-	display: block;
-	transition: all 0.3s ease;
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
 }
-.footer-col ul li a:hover{
-	color: #ffffff;
-	padding-left: 8px;
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
 }
-.footer-col .social-links a{
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	background-color: rgba(255,255,255,0.2);
-	margin:0 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	color: #ffffff;
-	transition: all 0.5s ease;
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
 }
-.footer-col .social-links a:hover{
-	color: #24262b;
-	background-color: #ffffff;
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
 }
 
 /*responsive*/
-@media(max-width: 767px){
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
 }
-}
-@media(max-width: 574px){
-  .footer-col{
-    width: 100%;
-}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
 }
 
 
