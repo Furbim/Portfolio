@@ -451,10 +451,10 @@ document.addEventListener("DOMContentLoaded", function(){
     document.body.classList.add("light-mode");
   } 
 
-  if(localStorage.getItem("language") == "pt"){
-    currentLanguage = 'en'; 
+  if(localStorage.getItem("language") == "en"){
+    currentLanguage = 'pt'; 
   } else{
-    currentLanguage = 'pt';
+    currentLanguage = 'en';
   }
 
   mudarIdioma();
