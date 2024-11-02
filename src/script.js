@@ -14,7 +14,7 @@ function escrever(str, done) {
   var typer = setInterval(function () {
     if (!char.length) {
       clearInterval(typer);
-      return setTimeout(done, 5000); // só para esperar um bocadinho
+      return setTimeout(done, 5000); 
     }
     var next = char.pop();
     div.innerHTML += next;
@@ -98,7 +98,6 @@ class DraggingEvent {
     })
   }
 
-  // Get the distance that the user has dragged
   getDistance(callback) {
     function distanceInit(e1) {
       let startingX, startingY;
@@ -141,17 +140,14 @@ class CardCarousel extends DraggingEvent {
   constructor(container, controller = undefined) {
     super(container)
 
-    // DOM elements
     this.container = container
     this.controllerElement = controller
     this.cards = container.querySelectorAll(".card")
 
-    // Carousel data
     this.centerIndex = (this.cards.length - 1) / 2;
     this.cardWidth = this.cards[0].offsetWidth / this.container.offsetWidth * 100
     this.xScale = {};
 
-    // Resizing
     window.addEventListener("resize", this.updateCardWidth.bind(this))
 
     if (this.controllerElement) {
@@ -159,10 +155,8 @@ class CardCarousel extends DraggingEvent {
     }
 
 
-    // Initializers
     this.build()
 
-    // Bind dragging event
     super.getDistance(this.moveCards.bind(this))
   }
 
@@ -198,7 +192,6 @@ class CardCarousel extends DraggingEvent {
     const temp = { ...this.xScale };
 
     if (e.keyCode === 39) {
-      // Left arrow
       for (let x in this.xScale) {
         const newX = (parseInt(x) - 1 < -this.centerIndex) ? this.centerIndex : parseInt(x) - 1;
 
@@ -207,7 +200,6 @@ class CardCarousel extends DraggingEvent {
     }
 
     if (e.keyCode == 37) {
-      // Right arrow
       for (let x in this.xScale) {
         const newX = (parseInt(x) + 1 > this.centerIndex) ? -this.centerIndex : parseInt(x) + 1;
 
@@ -377,10 +369,9 @@ function idade() {
   const anoAtual = dataAtual.getFullYear();
   idade = anoAtual - 2007;
 
-  // Ajuste para o caso de ainda não ter feito aniversário neste ano
   const mesAtual = dataAtual.getMonth();
   const diaAtual = dataAtual.getDate();
-  const mesNascimento = new Date(2007, 8, 14).getMonth(); // 0 representa janeiro
+  const mesNascimento = new Date(2007, 8, 14).getMonth();
   const diaNascimento = new Date(2007, 8, 14).getDate();
 
   if (mesAtual < mesNascimento || (mesAtual === mesNascimento && diaAtual < diaNascimento)) {
@@ -409,8 +400,17 @@ const texts = {
     contact: "Contato",
     lblNome: "Nome",
     lblSobrenome: "Sobrenome",
+    lblTelefone: "Telefone",
     lblMensagem: "Mensagem",
-    formBtn: "Enviar"
+    formBtn: "Enviar",
+    acessar: "Acessar",
+    descricao1: "Reprodução de um site utilizando display grid, com algumas funções em javascript!",
+    descricao2: "Desenvolvimento do meu portfólio pessoal, responsivo e com diversas funcionalidades em javascript!",
+    descricao3: "Sistema de gerenciamento de turmas, feito com php contendo diversas funcionalidades e inovações afim de facilitar a gestão das turmas!",
+    descricao4: "Jogo de Damas feito completamente em Java, ainda incompleto!",
+    descricao5: "Veja mais projetos visitando minha página no Github, clicando no botão abaixo!",
+    projetos: "Projetos",
+    contato: "Entre em contato",
   },
   en: {
     navHome: "HOME",
@@ -429,18 +429,41 @@ const texts = {
     contact: "Contact",
     lblNome: "First Name",
     lblSobrenome: "Last Name",
+    lblTelefone: "Phone",
     lblMensagem: "Message",
-    formBtn: "Send"
+    formBtn: "Send",
+    acessar: "View More",
+    descricao1: "Reproduction of a website using display grid, with some JavaScript functions!",
+    descricao2: "Development of my personal portfolio, responsive and with various JavaScript functionalities!",
+    descricao3: "Class management system, built with PHP, containing multiple functionalities and innovations to facilitate class management!",
+    descricao4: "Checkers game made entirely in Java, still incomplete!",
+    descricao5: "See more projects by visiting my GitHub page by clicking the button below!",
+    projetos: "Projects",
+    contato: "Contact Me",
   }
 };
 
-let currentLanguage = 'en'; // Idioma padrão
+var currentLanguage;
 
-document.onload = mudarIdioma();
+document.addEventListener("DOMContentLoaded", function(){
+  if(localStorage.getItem("theme") == "light"){
+    toggleImg.src = "../img/moon.png";
+    document.body.classList.add("light-mode");
+  } 
+
+  if(localStorage.getItem("language") == "pt"){
+    currentLanguage = 'en'; 
+  } else{
+    currentLanguage = 'pt';
+  }
+
+  mudarIdioma();
+});
+
 
 async function mudarIdioma() {
   const idioma = document.getElementById("idioma");
-  currentLanguage = currentLanguage === 'pt' ? 'en' : 'pt'; // Alterna o idioma
+  currentLanguage = currentLanguage === 'pt' ? 'en' : 'pt'; 
 
   document.querySelector(".animation #navHome").textContent = texts[currentLanguage].navHome;
   document.querySelector(".animation #navSobre").textContent = texts[currentLanguage].navSobre;
@@ -457,11 +480,17 @@ async function mudarIdioma() {
   document.querySelector("#sobre button").textContent = texts[currentLanguage].visitLinkedIn;
 
   document.querySelector("#portfolio h1").textContent = texts[currentLanguage].portfolio;
+  document.querySelector("#portfolio .container .card-carousel .card #descricao1").textContent = texts[currentLanguage].descricao1;
+  document.querySelector("#portfolio .container .card-carousel .card #descricao2").textContent = texts[currentLanguage].descricao2;
+  document.querySelector("#portfolio .container .card-carousel .card #descricao3").textContent = texts[currentLanguage].descricao3;
+  document.querySelector("#portfolio .container .card-carousel .card #descricao4").textContent = texts[currentLanguage].descricao4;
+  document.querySelector("#portfolio .container .card-carousel .card #descricao5").textContent = texts[currentLanguage].descricao5;
   document.querySelector("#arrasta").textContent = texts[currentLanguage].dragToMove;
 
   document.querySelector("#contato h1").textContent = texts[currentLanguage].contact;
   document.querySelector("#contato .login-box #lblNome").textContent = texts[currentLanguage].lblNome;
   document.querySelector("#contato .login-box #lblSobrenome").textContent = texts[currentLanguage].lblSobrenome;
+  document.querySelector("#contato .login-box #lblTelefone").textContent = texts[currentLanguage].lblTelefone;
   document.querySelector("#contato .login-box #lblMensagem").textContent = texts[currentLanguage].lblMensagem;
   document.querySelector("#contato .custom-btn").textContent = texts[currentLanguage].formBtn;
 
@@ -470,9 +499,17 @@ async function mudarIdioma() {
   document.querySelector(".footer-col #navPortfolio").textContent = texts[currentLanguage].navPortfolio;
   document.querySelector(".footer-col #navContato").textContent = texts[currentLanguage].navContato;
 
+  document.querySelector(".footer-col #projetos").textContent = texts[currentLanguage].projetos;
+  document.querySelector(".footer-col #contato").textContent = texts[currentLanguage].contato;
 
+ 
   idioma.src = currentLanguage === 'pt' ? "./img/portuguese.png" : "./img/english.png";
+  localStorage.setItem("language", currentLanguage);
 }
+
+
+
+
 
 
 const toggleImg = document.getElementById("mode");
@@ -483,12 +520,13 @@ toggleImg.addEventListener("click", function(){
 
     toggleImg.src = "../img/moon.png";
     document.body.classList.add("light-mode");
+    localStorage.setItem("theme", "light");
 
   }else{
 
     toggleImg.src = "../img/sun.png";
     document.body.classList.remove("light-mode");
-
+    localStorage.setItem("theme", "dark");
   }
 
 });
@@ -505,3 +543,75 @@ document.querySelectorAll('.smooth-scroll').forEach(anchor => {
       });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("#contato form");
+  const nome = form.querySelector("input[name='nome']");
+  const sobrenome = form.querySelector("input[name='sobrenome']");
+  const telefone = form.querySelector("input[name='telefone']");
+  const email = form.querySelector("input[name='email']");
+  const mensagem = form.querySelector("textarea");
+
+  // Função para validar email usando expressão regular
+  function validarEmail(email) {
+      const regexEmail = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+      return regexEmail.test(email);
+  }
+
+  // Função para formatar o telefone
+  function formatarTelefone(event) {
+      let valor = event.target.value.replace(/\D/g, ""); // Remove caracteres não numéricos
+      if (valor.length > 10) {
+          valor = valor.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1) $2-$3"); // Formato (XX) XXXXX-XXXX
+      } else if (valor.length > 5) {
+          valor = valor.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, "($1) $2-$3"); // Formato (XX) XXXX-XXXX
+      } else if (valor.length > 2) {
+          valor = valor.replace(/^(\d{2})(\d{0,5})/, "($1) $2"); // Formato (XX) XXXX
+      } else {
+          valor = valor.replace(/^(\d*)/, "($1"); // Início com (XX
+      }
+      event.target.value = valor;
+  }
+
+  // Aplica a formatação ao telefone enquanto o usuário digita
+  telefone.addEventListener("input", formatarTelefone);
+
+  // Validação do formulário ao clicar no botão de envio
+  form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Evita o envio até a validação
+
+      if (nome.value.trim() === "") {
+          alert("Por favor, preencha o campo Nome.");
+          nome.focus();
+          return;
+      }
+
+      if (sobrenome.value.trim() === "") {
+          alert("Por favor, preencha o campo Sobrenome.");
+          sobrenome.focus();
+          return;
+      }
+
+      if (telefone.value.trim() === "" || telefone.value.length < 14) {
+          alert("Por favor, insira um número de telefone válido.");
+          telefone.focus();
+          return;
+      }
+
+      if (!validarEmail(email.value)) {
+          alert("Por favor, insira um email válido.");
+          email.focus();
+          return;
+      }
+
+      if (mensagem.value.trim() === "") {
+          alert("Por favor, escreva sua mensagem.");
+          mensagem.focus();
+          return;
+      }
+
+      alert("Formulário enviado com sucesso!");
+      form.submit(); // Envia o formulário após a validação
+  });
+});
+
