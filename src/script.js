@@ -518,13 +518,13 @@ toggleImg.addEventListener("click", function(){
 
   if(toggleImg.src.includes("sun.png")){
 
-    toggleImg.src = "../img/moon.png";
+    toggleImg.src = "./img/moon.png";
     document.body.classList.add("light-mode");
     localStorage.setItem("theme", "light");
 
   }else{
 
-    toggleImg.src = "../img/sun.png";
+    toggleImg.src = "./img/sun.png";
     document.body.classList.remove("light-mode");
     localStorage.setItem("theme", "dark");
   }
