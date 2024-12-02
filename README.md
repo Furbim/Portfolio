@@ -13,7 +13,7 @@ Portfólio(https://Furbim.github.io/Portfolio)
 Se você quiser entrar em contato comigo, fique à vontade para enviar um e-mail ou uma mensagem nas redes sociais:
 
 - **E-mail:** thiagofreitasofc202@gmail.com
-- **LinkedIn:** [linkedin.com/in/thiagofreitasdev][(https://www.linkedin.com/in/thiagofreitasdev/)]
+- **LinkedIn:** (https://www.linkedin.com/in/thiagofreitasdev/)
 
 ---
 
