@@ -1267,13 +1267,10 @@
           submitBtn.disabled = false;
           
 
-          if(contactForm.submit()){
-            showToast('Mensagem enviada!', 'Obrigado pelo contato. Retornarei em breve.');
-            contactForm.reset();
-          }else{
-            messageError.textContent ='Erro ao enviar!', 'Tente enviar o formulário novamente.';
-            messageError.classList.remove('hidden');
-          }
+          contactForm.submit();
+          showToast('Mensagem enviada!', 'Obrigado pelo contato. Retornarei em breve.');
+          contactForm.reset();
+
           
         }, 1000);
       }
