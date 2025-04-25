@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thiago Freitas | Desenvolvedor Web e Estudante de Mecatrônica</title>
-  <meta name="description" content="Portfólio pessoal de Thiago Freitas, desenvolvedor web e estudante de mecatrônica de Belo Horizonte, MG.">
-  
+  <meta name="description"
+    content="Portfólio pessoal de Thiago Freitas, desenvolvedor web e estudante de mecatrônica de Belo Horizonte, MG.">
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
   <!-- Google Fonts - Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -37,7 +39,7 @@
       },
     }
   </script>
-  
+
   <style>
     :root {
       --background: 0 0% 100%;
@@ -130,9 +132,11 @@
       0% {
         background-position: 0% 50%;
       }
+
       50% {
         background-position: 100% 50%;
       }
+
       100% {
         background-position: 0% 50%;
       }
@@ -147,9 +151,11 @@
       0% {
         transform: translateY(0px);
       }
+
       50% {
         transform: translateY(-10px);
       }
+
       100% {
         transform: translateY(0px);
       }
@@ -168,23 +174,19 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.3) 50%,
-        rgba(255, 255, 255, 0) 100%
-      );
+      background: linear-gradient(to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.3) 50%,
+          rgba(255, 255, 255, 0) 100%);
       transform: rotate(30deg);
       animation: shine 6s infinite;
     }
 
     .dark .shine::after {
-      background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.1) 50%,
-        rgba(255, 255, 255, 0) 100%
-      );
+      background: linear-gradient(to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.1) 50%,
+          rgba(255, 255, 255, 0) 100%);
     }
 
     @keyframes shine {
@@ -192,6 +194,7 @@
         left: -100%;
         top: -100%;
       }
+
       100% {
         left: 100%;
         top: 100%;
@@ -210,16 +213,19 @@
       from {
         width: 0;
       }
+
       to {
         width: 100%;
       }
     }
 
     @keyframes blink-caret {
+
       from,
       to {
         border-color: transparent;
       }
+
       50% {
         border-color: currentColor;
       }
@@ -245,6 +251,7 @@
       0% {
         background-position: 0% 50%;
       }
+
       100% {
         background-position: 100% 50%;
       }
@@ -269,9 +276,11 @@
       0% {
         transform: translateY(0);
       }
+
       50% {
         transform: translateY(-15px);
       }
+
       100% {
         transform: translateY(0);
       }
@@ -341,7 +350,7 @@
       border-color: #0070f3;
       box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.25);
     }
-    
+
     /* Theme toggle icons */
     .theme-icon {
       position: absolute;
@@ -350,28 +359,29 @@
       transform: translate(-50%, -50%);
       transition: opacity 0.3s ease, transform 0.3s ease;
     }
-    
+
     .sun-icon {
       opacity: 1;
       transform: translate(-50%, -50%) rotate(0) scale(1);
     }
-    
+
     .moon-icon {
       opacity: 0;
       transform: translate(-50%, -50%) rotate(90deg) scale(0);
     }
-    
+
     .dark .sun-icon {
       opacity: 0;
       transform: translate(-50%, -50%) rotate(-90deg) scale(0);
     }
-    
+
     .dark .moon-icon {
       opacity: 1;
       transform: translate(-50%, -50%) rotate(0) scale(1);
     }
   </style>
 </head>
+
 <body>
   <main class="min-h-screen bg-background">
     <!-- Header -->
@@ -389,28 +399,39 @@
 
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center space-x-8">
-          <button onclick="scrollToSection('hero')" class="text-foreground/80 hover:text-primary transition-colors relative group text-sm uppercase tracking-wider font-medium">
+          <button onclick="scrollToSection('hero')"
+            class="text-foreground/80 hover:text-primary transition-colors relative group text-sm uppercase tracking-wider font-medium">
             Início
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
           </button>
-          <button onclick="scrollToSection('about')" class="text-foreground/80 hover:text-primary transition-colors relative group text-sm uppercase tracking-wider font-medium">
+          <button onclick="scrollToSection('about')"
+            class="text-foreground/80 hover:text-primary transition-colors relative group text-sm uppercase tracking-wider font-medium">
             Sobre Mim
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
           </button>
-          <button onclick="scrollToSection('projects')" class="text-foreground/80 hover:text-primary transition-colors relative group text-sm uppercase tracking-wider font-medium">
+          <button onclick="scrollToSection('projects')"
+            class="text-foreground/80 hover:text-primary transition-colors relative group text-sm uppercase tracking-wider font-medium">
             Projetos
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
           </button>
-          <button onclick="scrollToSection('contact')" class="text-foreground/80 hover:text-primary transition-colors relative group text-sm uppercase tracking-wider font-medium">
+          <button onclick="scrollToSection('contact')"
+            class="text-foreground/80 hover:text-primary transition-colors relative group text-sm uppercase tracking-wider font-medium">
             Contato
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
           </button>
         </nav>
 
         <div class="flex items-center gap-2">
           <!-- Theme Toggle - Corrigido -->
-          <button id="theme-toggle" class="rounded-full p-2 bg-transparent hover:bg-muted/20 transition-colors relative w-10 h-10">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="theme-icon sun-icon">
+          <button id="theme-toggle"
+            class="rounded-full p-2 bg-transparent hover:bg-muted/20 transition-colors relative w-10 h-10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="theme-icon sun-icon">
               <circle cx="12" cy="12" r="4"></circle>
               <path d="M12 2v2"></path>
               <path d="M12 20v2"></path>
@@ -421,7 +442,9 @@
               <path d="m6.34 17.66-1.41 1.41"></path>
               <path d="m19.07 4.93-1.41 1.41"></path>
             </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="theme-icon moon-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="theme-icon moon-icon">
               <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
             </svg>
             <span class="sr-only">Alternar tema</span>
@@ -429,7 +452,8 @@
 
           <!-- Mobile Menu Button -->
           <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-muted/20 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="4" x2="20" y1="12" y2="12"></line>
               <line x1="4" x2="20" y1="6" y2="6"></line>
               <line x1="4" x2="20" y1="18" y2="18"></line>
@@ -441,18 +465,23 @@
     </header>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-y-0 right-0 w-[250px] bg-background border-l border-border transform translate-x-full transition-transform duration-300 ease-in-out z-50">
-      <div class="flex flex-col gap-6 mt-20 p-6">
-        <button onclick="closeMobileMenu(); scrollToSection('hero')" class="text-foreground/80 hover:text-primary transition-colors text-lg font-medium">
+    <div id="mobile-menu"
+      class="fixed inset-y-0 right-0 w-[250px]  border-l border-border transform translate-x-full transition-transform duration-300 ease-in-out z-50 bg-white darkMode:bg-black">
+      <div class="flex flex-col gap-6 mt-20 p-6 ">
+        <button onclick="closeMobileMenu(); scrollToSection('hero')"
+          class="text-foreground/80 hover:text-primary transition-colors text-lg font-medium">
           Início
         </button>
-        <button onclick="closeMobileMenu(); scrollToSection('about')" class="text-foreground/80 hover:text-primary transition-colors text-lg font-medium">
+        <button onclick="closeMobileMenu(); scrollToSection('about')"
+          class="text-foreground/80 hover:text-primary transition-colors text-lg font-medium">
           Sobre Mim
         </button>
-        <button onclick="closeMobileMenu(); scrollToSection('projects')" class="text-foreground/80 hover:text-primary transition-colors text-lg font-medium">
+        <button onclick="closeMobileMenu(); scrollToSection('projects')"
+          class="text-foreground/80 hover:text-primary transition-colors text-lg font-medium">
           Projetos
         </button>
-        <button onclick="closeMobileMenu(); scrollToSection('contact')" class="text-foreground/80 hover:text-primary transition-colors text-lg font-medium">
+        <button onclick="closeMobileMenu(); scrollToSection('contact')"
+          class="text-foreground/80 hover:text-primary transition-colors text-lg font-medium">
           Contato
         </button>
       </div>
@@ -483,24 +512,30 @@
               </div>
             </div>
             <div class="flex flex-col gap-2 min-[400px]:flex-row">
-              <a href="/cv.pdf" download class="btn-primary inline-flex items-center justify-center gap-1 px-4 py-2 rounded-md bg-gradient-to-r from-primary to-primary/80 text-white font-medium animated-gradient">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <a href="/Currículo_Thiago_Martins_de _Freitas.pdf" download
+                class="btn-primary inline-flex items-center justify-center gap-1 px-4 py-2 rounded-md bg-gradient-to-r from-primary to-primary/80 text-white font-medium animated-gradient">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                   <polyline points="7 10 12 15 17 10"></polyline>
                   <line x1="12" y1="15" x2="12" y2="3"></line>
                 </svg>
                 Baixar Currículo
               </a>
-              <button onclick="scrollToSection('about')" class="inline-flex items-center justify-center px-4 py-2 rounded-md border border-border bg-background hover:bg-muted/20 transition-colors">
+              <button onclick="scrollToSection('about')"
+                class="inline-flex items-center justify-center px-4 py-2 rounded-md border border-border bg-background hover:bg-muted/20 transition-colors">
                 Saiba mais
               </button>
             </div>
           </div>
 
           <div class="flex items-center justify-center opacity-0" id="hero-image">
-            <div class="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[400px] md:h-[400px] rounded-full overflow-hidden border-2 border-primary/20 floating">
+            <div
+              class="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[400px] md:h-[400px] rounded-full overflow-hidden border-2 border-primary/20 floating">
               <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent z-10"></div>
-              <img src="https://via.placeholder.com/400" alt="Thiago Martins de Freitas" class="object-cover w-full h-full" />
+              <img
+                src="https://avatars.githubusercontent.com/u/155479087?s=400&u=38fdbe7f3bbedd3f8a366aa7f0e83c6d78cbf985&v=4"
+                alt="Thiago Martins de Freitas" class="object-cover w-full h-full" />
 
               <!-- Animated circles around the profile image -->
               <div id="profile-circle-1" class="absolute -inset-1 rounded-full border-2 border-primary/30 z-0"></div>
@@ -510,15 +545,18 @@
         </div>
       </div>
 
-      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-0" id="scroll-down-btn">
-        <button onclick="scrollToSection('about')" class="rounded-full p-3 border border-primary/20 bg-transparent hover:bg-muted/20 transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0070f3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div class="absolute bottom-10 animate-bounce opacity-0" id="scroll-down-btn">
+        <button onclick="scrollToSection('about')"
+          class="rounded-full p-3 border border-primary/20 bg-transparent hover:bg-muted/20 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="#0070f3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 5v14"></path>
             <path d="m19 12-7 7-7-7"></path>
           </svg>
           <span class="sr-only">Rolar para baixo</span>
         </button>
       </div>
+
     </section>
 
     <!-- About Section -->
@@ -543,13 +581,17 @@
               aprimorar meus projetos. Meu objetivo é desenvolver soluções que integrem sistemas web, mobile e desktop
               com automação e robótica, criando experiências tecnológicas completas e eficientes.
             </p>
-            
-            <div class="mt-6 p-4 border border-primary/20 rounded-lg bg-primary/5 relative overflow-hidden">
-              <div class="absolute -top-6 -right-6 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary animate-pulse">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+            <div class="mt-6 p-4 border border-primary/20 rounded-lg bg-primary/5 relative ">
+              <div
+                class="absolute -top-6 -right-6 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary animate-pulse z-10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="9" y1="18" x2="15" y2="18"></line>
                   <line x1="10" y1="22" x2="14" y2="22"></line>
-                  <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"></path>
+                  <path
+                    d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14">
+                  </path>
                 </svg>
               </div>
               <h4 class="text-lg font-semibold mb-2">Desenvolvedor Multidisciplinar</h4>
@@ -562,25 +604,30 @@
 
           <div class="space-y-6">
             <h3 class="text-2xl font-bold">Habilidades</h3>
-            
+
             <div class="flex flex-wrap gap-2 mb-6" id="skill-categories">
-              <button class="skill-btn active px-3 py-1 rounded-full text-sm font-medium bg-primary text-white" data-category="all">
+              <button class="skill-btn active px-3 py-1 rounded-full text-sm font-medium bg-primary text-white"
+                data-category="all">
                 Todas
               </button>
-              <button class="skill-btn px-3 py-1 rounded-full text-sm font-medium bg-muted hover:bg-muted/80" data-category="web">
+              <button class="skill-btn px-3 py-1 rounded-full text-sm font-medium bg-muted hover:bg-muted/80"
+                data-category="web">
                 Web
               </button>
-              <button class="skill-btn px-3 py-1 rounded-full text-sm font-medium bg-muted hover:bg-muted/80" data-category="mobile">
+              <button class="skill-btn px-3 py-1 rounded-full text-sm font-medium bg-muted hover:bg-muted/80"
+                data-category="mobile">
                 Mobile
               </button>
-              <button class="skill-btn px-3 py-1 rounded-full text-sm font-medium bg-muted hover:bg-muted/80" data-category="desktop">
+              <button class="skill-btn px-3 py-1 rounded-full text-sm font-medium bg-muted hover:bg-muted/80"
+                data-category="desktop">
                 Desktop
               </button>
-              <button class="skill-btn px-3 py-1 rounded-full text-sm font-medium bg-muted hover:bg-muted/80" data-category="languages">
+              <button class="skill-btn px-3 py-1 rounded-full text-sm font-medium bg-muted hover:bg-muted/80"
+                data-category="languages">
                 Linguagens
               </button>
             </div>
-            
+
             <div class="grid grid-cols-2 gap-4 sm:grid-cols-3" id="skills-container">
               <!-- Skills will be dynamically inserted here -->
             </div>
@@ -601,11 +648,16 @@
         <div class="w-full">
           <div class="flex justify-center mb-8">
             <div class="grid w-full max-w-md grid-cols-5 bg-muted rounded-lg p-1" id="project-tabs">
-              <button class="project-tab active py-2 px-3 rounded-md text-sm font-medium transition-colors" data-category="all">Todos</button>
-              <button class="project-tab py-2 px-3 rounded-md text-sm font-medium transition-colors" data-category="web">Web</button>
-              <button class="project-tab py-2 px-3 rounded-md text-sm font-medium transition-colors" data-category="mobile">Mobile</button>
-              <button class="project-tab py-2 px-3 rounded-md text-sm font-medium transition-colors" data-category="desktop">Desktop</button>
-              <button class="project-tab py-2 px-3 rounded-md text-sm font-medium transition-colors" data-category="hardware">Hardware</button>
+              <button class="project-tab active py-2 px-3 rounded-md text-sm font-medium transition-colors"
+                data-category="all">Todos</button>
+              <button class="project-tab py-2 px-3 rounded-md text-sm font-medium transition-colors"
+                data-category="web">Web</button>
+              <button class="project-tab py-2 px-3 rounded-md text-sm font-medium transition-colors"
+                data-category="mobile">Mobile</button>
+              <button class="project-tab py-2 px-3 rounded-md text-sm font-medium transition-colors"
+                data-category="desktop">Desktop</button>
+              <button class="project-tab py-2 px-3 rounded-md text-sm font-medium transition-colors"
+                data-category="hardware">Hardware</button>
             </div>
           </div>
 
@@ -615,9 +667,12 @@
         </div>
 
         <div class="flex justify-center mt-12">
-          <a href="https://github.com/Furbim" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md border border-border bg-background hover:bg-muted/20 transition-colors">
+          <a href="https://github.com/Furbim" target="_blank" rel="noopener noreferrer"
+            class="group inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md border border-border bg-background hover:bg-muted/20 transition-colors">
             Ver mais projetos
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="transition-transform group-hover:translate-x-1">
               <path d="M7 7h10v10"></path>
               <path d="M7 17 17 7"></path>
             </svg>
@@ -646,7 +701,8 @@
             <div class="space-y-4 mt-6">
               <div class="flex items-center gap-4">
                 <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
                     <circle cx="12" cy="10" r="3"></circle>
                   </svg>
@@ -658,14 +714,16 @@
               </div>
               <div class="flex items-center gap-4">
                 <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                   </svg>
                 </div>
                 <div>
                   <p class="text-sm text-muted-foreground">Email</p>
-                  <a href="mailto:thiagofreitasofc202@gmail.com" class="font-medium hover:text-primary transition-colors">
+                  <a href="mailto:thiagofreitasofc202@gmail.com"
+                    class="font-medium hover:text-primary transition-colors">
                     thiagofreitasofc202@gmail.com
                   </a>
                 </div>
@@ -675,21 +733,29 @@
             <div class="pt-4">
               <h4 class="text-sm font-semibold mb-3">Me encontre nas redes</h4>
               <div class="flex gap-3">
-                <a href="https://github.com/Furbim" target="_blank" rel="noopener noreferrer" class="social-icon w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-foreground">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                <a href="https://github.com/Furbim" target="_blank" rel="noopener noreferrer"
+                  class="social-icon w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-foreground">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                    </path>
                     <path d="M9 18c-4.51 2-5-2-7-2"></path>
                   </svg>
                 </a>
-                <a href="https://www.linkedin.com/in/thiagofreitasdev/" target="_blank" rel="noopener noreferrer" class="social-icon w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-foreground">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <a href="https://www.linkedin.com/in/thiagofreitasdev/" target="_blank" rel="noopener noreferrer"
+                  class="social-icon w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-foreground">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                     <rect width="4" height="12" x="2" y="9"></rect>
                     <circle cx="4" cy="4" r="2"></circle>
                   </svg>
                 </a>
-                <a href="https://github.com/Furbim" target="_blank" rel="noopener noreferrer" class="social-icon w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-foreground">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <a href="https://wa.me/31983114021" target="_blank" rel="noopener noreferrer"
+                  class="social-icon w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-foreground">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M7 7h10v10"></path>
                     <path d="M7 17 17 7"></path>
                   </svg>
@@ -699,25 +765,33 @@
           </div>
 
           <div class="space-y-6">
-            <form id="contact-form" class="space-y-6">
+            <form action="https://formsubmit.co/thiagofreitasofc202@gmail.com" method="post" id="contact-form" class="space-y-6">
               <div>
                 <label for="name" class="block text-sm font-medium mb-2">Nome</label>
-                <input type="text" id="name" name="name" placeholder="Seu nome" class="form-input w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none" required>
+                <input type="text" id="name" name="name" placeholder="Seu nome"
+                  class="form-input w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none"
+                  required>
                 <div class="text-red-500 text-sm mt-1 hidden" id="name-error"></div>
               </div>
               <div>
                 <label for="email" class="block text-sm font-medium mb-2">Email</label>
-                <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" class="form-input w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none" required>
+                <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com"
+                  class="form-input w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none"
+                  required>
                 <div class="text-red-500 text-sm mt-1 hidden" id="email-error"></div>
               </div>
               <div>
                 <label for="message" class="block text-sm font-medium mb-2">Mensagem</label>
-                <textarea id="message" name="message" placeholder="Escreva sua mensagem aqui..." class="form-input w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none min-h-[120px] resize-none" required></textarea>
+                <textarea id="message" name="message" placeholder="Escreva sua mensagem aqui..."
+                  class="form-input w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none min-h-[120px] resize-none"
+                  required></textarea>
                 <div class="text-red-500 text-sm mt-1 hidden" id="message-error"></div>
               </div>
-              <button type="submit" id="submit-btn" class="btn-primary w-full inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-primary text-white font-medium">
+              <button type="submit" id="submit-btn"
+                class="btn-primary w-full inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-primary text-white font-medium">
                 Enviar Mensagem
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="m22 2-7 20-4-9-9-4Z"></path>
                   <path d="M22 2 11 13"></path>
                 </svg>
@@ -746,9 +820,11 @@
     </footer>
 
     <!-- Toast Notification -->
-    <div id="toast" class="fixed bottom-4 right-4 bg-background border border-border shadow-lg rounded-lg p-4 flex items-start gap-3 transform translate-y-16 opacity-0 transition-all duration-300 z-50 max-w-sm">
+    <div id="toast"
+      class="fixed bottom-4 right-4 bg-background border border-border shadow-lg rounded-lg p-4 flex items-start gap-3 transform translate-y-16 opacity-0 transition-all duration-300 z-50 max-w-sm">
       <div class="bg-primary/10 text-primary p-2 rounded-full">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M20 6 9 17l-5-5"></path>
         </svg>
       </div>
@@ -759,7 +835,8 @@
     </div>
 
     <!-- Overlay for mobile menu -->
-    <div id="overlay" class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 z-40"></div>
+    <div id="overlay"
+      class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 z-40"></div>
 
     <script>
       // DOM Elements
@@ -782,7 +859,7 @@
       const bgBlob2 = document.getElementById('bg-blob-2');
       const profileCircle1 = document.getElementById('profile-circle-1');
       const profileCircle2 = document.getElementById('profile-circle-2');
-      
+
       // Set current year
       currentYearEl.textContent = new Date().getFullYear();
 
@@ -791,7 +868,7 @@
         const logoText = document.getElementById('logo-text');
         const footerLogoText = document.getElementById('footer-logo-text');
         const name = "Thiago Freitas";
-        
+
         // Create letter spans for header logo
         logoText.innerHTML = '';
         Array.from(name).forEach((letter, i) => {
@@ -801,7 +878,7 @@
           span.style.transitionDelay = `${i * 50}ms`;
           logoText.appendChild(span);
         });
-        
+
         // Create letter spans for footer logo
         footerLogoText.innerHTML = '';
         Array.from(name).forEach((letter, i) => {
@@ -811,7 +888,7 @@
           span.style.transitionDelay = `${i * 50}ms`;
           footerLogoText.appendChild(span);
         });
-        
+
         // Wave animation every 2 minutes
         function startWaveAnimation() {
           const letters = document.querySelectorAll('.logo-letter');
@@ -824,10 +901,10 @@
             }, i * 50);
           });
         }
-        
+
         // Initial animation
         setTimeout(startWaveAnimation, 1000);
-        
+
         // Repeat every 2 minutes
         setInterval(startWaveAnimation, 120000);
       }
@@ -841,18 +918,17 @@
         { name: "MySQL", icon: "database", category: "web" },
         { name: "Git", icon: "git-branch", category: "web" },
         { name: "React", icon: "globe", category: "web" },
-        
+
         // Mobile
         { name: "Flutter", icon: "smartphone", category: "mobile" },
         { name: "Swift", icon: "feather", category: "mobile" },
         { name: "Dart", icon: "layers", category: "mobile" },
-        { name: "React Native", icon: "smartphone", category: "mobile" },
-        
+
         // Desktop
         { name: "C#", icon: "monitor", category: "desktop" },
         { name: "Python", icon: "code", category: "desktop" },
         { name: "Java", icon: "coffee", category: "desktop" },
-        
+
         // Hardware/Robótica
         { name: "Robótica", icon: "cpu", category: "languages" },
       ];
@@ -861,64 +937,35 @@
       const projects = [
         {
           id: 1,
-          title: "Sistema de Agendamento",
+          title: "OnBarber (Em Desenvolvimento)",
           description: "Aplicação web para gerenciamento de agendamentos com interface intuitiva e notificações automáticas.",
           category: "web",
           technologies: ["PHP", "Laravel", "MySQL", "JavaScript"],
           icon: "calendar",
-          link: "#",
-          github: "#",
+          link: "https://OnBarber.com",
+          github: "https://github.com/Furbim/OnBarber",
         },
         {
           id: 2,
-          title: "Dashboard Administrativo",
-          description: "Painel administrativo completo com gráficos, relatórios e gerenciamento de usuários.",
+          title: "Sistema de Turmas",
+          description: "Sistema de gestão de presença e turmas usado por igrejas de BH. Implementei sistema de autenticação e geração de relatórios.",
           category: "web",
-          technologies: ["React", "Node.js", "Express", "MongoDB"],
+          technologies: ["PHP", "Node.js", "MySQL", "Ajax"],
           icon: "database",
-          link: "#",
-          github: "#",
+          link: "https://crisma-spc.wuaze.com",
+          github: "https://github.com/Furbim/Crisma",
         },
         {
           id: 3,
-          title: "Sistema de Automação com Sensores",
-          description: "Projeto de automação utilizando Arduino e sensores para monitoramento ambiental.",
-          category: "hardware",
-          technologies: ["Arduino", "C++", "Sensores", "IoT"],
-          icon: "cpu",
-          link: "#",
-          github: "#",
-        },
-        {
-          id: 4,
-          title: "Braço Robótico Controlado",
-          description: "Braço robótico com controle via interface web para operações de precisão.",
-          category: "hardware",
-          technologies: ["Raspberry Pi", "Python", "Servomotores", "WebSockets"],
-          icon: "cpu",
-          link: "#",
-          github: "#",
-        },
-        {
-          id: 5,
-          title: "Aplicativo de Fitness",
-          description: "Aplicativo mobile para acompanhamento de treinos e dietas com sincronização na nuvem.",
-          category: "mobile",
-          technologies: ["Flutter", "Dart", "Firebase", "Google Fit API"],
-          icon: "smartphone",
-          link: "#",
-          github: "#",
-        },
-        {
-          id: 6,
-          title: "Software de Gestão Empresarial",
-          description: "Sistema desktop para gestão de estoque, vendas e financeiro para pequenas empresas.",
-          category: "desktop",
-          technologies: ["C#", ".NET", "SQL Server", "WPF"],
-          icon: "monitor",
-          link: "#",
-          github: "#",
-        },
+          title: "Jema(Em Desenvolvimento)",
+          description: "Plataforma Gamificada de Educação Financeira, desenvolvida em PHP, Laravel e React.",
+          category: "web",
+          technologies: ["PHP", "Node.js", "MySQL", "Ajax"],
+          icon: "bitcoin",
+          link: "https://crisma-spc.wuaze.com",
+          github: "https://github.com/Furbim/Crisma",
+        }
+
       ];
 
       // Developer types for hero section
@@ -934,22 +981,22 @@
       function renderSkills(category = 'all') {
         const skillsContainer = document.getElementById('skills-container');
         skillsContainer.innerHTML = '';
-        
-        const filteredSkills = category === 'all' 
-          ? skills 
+
+        const filteredSkills = category === 'all'
+          ? skills
           : skills.filter(skill => skill.category === category);
-        
+
         filteredSkills.forEach((skill, index) => {
           const delay = index * 100;
-          
+
           const skillItem = document.createElement('div');
           skillItem.className = 'skill-item flex flex-col items-center justify-center p-4 bg-background rounded-lg border border-border hover:border-primary/50 transition-all duration-300';
           skillItem.style.opacity = '0';
           skillItem.style.transform = 'translateY(20px)';
-          
+
           // Usando SVG direto em vez de Lucide
           let iconSvg;
-          switch(skill.icon) {
+          switch (skill.icon) {
             case 'code':
               iconSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>`;
               break;
@@ -983,19 +1030,22 @@
             case 'cpu':
               iconSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>`;
               break;
+            case 'bitcoin':
+              iconSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M20.247 14.052a8.5 8.5 0 0 1-10.302 6.194C5.394 19.11 2.62 14.5 3.754 9.95s5.74-7.33 10.288-6.195c4.562 1.12 7.337 5.744 6.205 10.298Z"/><path stroke-linecap="square" stroke-linejoin="round" d="m9.4 14.912l1.693-6.792m-1.456-.363L13.818 8.8c2.728.68 2.12 3.877-.786 3.153c3.184.794 2.86 4.578-.907 3.639c-1.841-.46-3.813-.95-3.813-.95m1.994-3.368l2.669.665m-1.397-3.698l.363-1.455m-2.42 9.703l.363-1.456m3.634-6.308l.363-1.455m-2.419 9.703l.363-1.456"/></g></svg>`;
+              break;
             default:
               iconSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>`;
           }
-          
+
           skillItem.innerHTML = `
             <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3 text-primary">
               ${iconSvg}
             </div>
             <span class="font-medium">${skill.name}</span>
           `;
-          
+
           skillsContainer.appendChild(skillItem);
-          
+
           // Animate in
           setTimeout(() => {
             skillItem.style.opacity = '1';
@@ -1008,22 +1058,22 @@
       function renderProjects(category = 'all') {
         const projectsContainer = document.getElementById('projects-container');
         projectsContainer.innerHTML = '';
-        
-        const filteredProjects = category === 'all' 
-          ? projects 
+
+        const filteredProjects = category === 'all'
+          ? projects
           : projects.filter(project => project.category === category);
-        
+
         filteredProjects.forEach((project, index) => {
           const delay = index * 100;
-          
+
           const projectCard = document.createElement('div');
           projectCard.className = 'project-card overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 h-full flex flex-col group bg-background rounded-lg';
           projectCard.style.opacity = '0';
           projectCard.style.transform = 'translateY(20px)';
-          
+
           // Usando SVG direto em vez de Lucide
           let iconSvg;
-          switch(project.icon) {
+          switch (project.icon) {
             case 'calendar':
               iconSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width  width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>`;
               break;
@@ -1042,7 +1092,7 @@
             default:
               iconSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle></svg>`;
           }
-          
+
           projectCard.innerHTML = `
             <div class="p-6 pb-0">
               <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 text-primary group-hover:bg-primary/20 transition-colors">
@@ -1077,9 +1127,9 @@
               </a>
             </div>
           `;
-          
+
           projectsContainer.appendChild(projectCard);
-          
+
           // Animate in
           setTimeout(() => {
             projectCard.style.opacity = '1';
@@ -1095,7 +1145,7 @@
           const headerHeight = header.offsetHeight;
           const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
           const offsetPosition = elementPosition - headerHeight;
-          
+
           window.scrollTo({
             top: offsetPosition,
             behavior: 'smooth'
@@ -1134,7 +1184,7 @@
       function checkThemePreference() {
         const savedTheme = localStorage.getItem('theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        
+
         if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
           document.documentElement.classList.add('dark');
         } else {
@@ -1146,12 +1196,12 @@
       function showToast(title, description) {
         const toastTitle = document.getElementById('toast-title');
         const toastDescription = document.getElementById('toast-description');
-        
+
         toastTitle.textContent = title;
         toastDescription.textContent = description;
-        
+
         toast.classList.remove('translate-y-16', 'opacity-0');
-        
+
         setTimeout(() => {
           toast.classList.add('translate-y-16', 'opacity-0');
         }, 3000);
@@ -1165,21 +1215,21 @@
         const nameError = document.getElementById('name-error');
         const emailError = document.getElementById('email-error');
         const messageError = document.getElementById('message-error');
-        
+
         let isValid = true;
-        
+
         // Reset errors
         nameError.classList.add('hidden');
         emailError.classList.add('hidden');
         messageError.classList.add('hidden');
-        
+
         // Validate name
         if (name.value.length < 2) {
           nameError.textContent = 'Nome deve ter pelo menos 2 caracteres';
           nameError.classList.remove('hidden');
           isValid = false;
         }
-        
+
         // Validate email
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email.value)) {
@@ -1187,52 +1237,60 @@
           emailError.classList.remove('hidden');
           isValid = false;
         }
-        
+
         // Validate message
         if (message.value.length < 10) {
           messageError.textContent = 'Mensagem deve ter pelo menos 10 caracteres';
           messageError.classList.remove('hidden');
           isValid = false;
         }
-        
+
         return isValid;
       }
 
       // Handle form submission
       function handleFormSubmit(e) {
         e.preventDefault();
-        
+
         if (!validateForm()) {
           return;
         }
-        
+
+        const messageError = document.getElementById('message-error');
         const originalText = submitBtn.innerHTML;
         submitBtn.innerHTML = 'Enviando...';
         submitBtn.disabled = true;
-        
+
         // Simulate form submission
         setTimeout(() => {
           submitBtn.innerHTML = originalText;
           submitBtn.disabled = false;
           
-          showToast('Mensagem enviada!', 'Obrigado pelo contato. Retornarei em breve.');
-          contactForm.reset();
+
+          if(contactForm.submit()){
+            showToast('Mensagem enviada!', 'Obrigado pelo contato. Retornarei em breve.');
+            contactForm.reset();
+          }else{
+            messageError.textContent ='Erro ao enviar!', 'Tente enviar o formulário novamente.';
+            messageError.classList.remove('hidden');
+          }
+          
         }, 1000);
       }
 
       // Cycle through developer types
       function cycleDeveloperTypes() {
         const typeSpan = developerTypeEl.querySelector('span');
-        
+
         // Fade out
         typeSpan.style.opacity = '0';
         typeSpan.style.transform = 'translateY(10px)';
-        
+
         setTimeout(() => {
           // Change text
           currentTypeIndex = (currentTypeIndex + 1) % developerTypes.length;
           typeSpan.textContent = developerTypes[currentTypeIndex];
-          
+
           // Fade in
           typeSpan.style.opacity = '1';
           typeSpan.style.transform = 'translateY(0)';
@@ -1244,14 +1302,14 @@
         // Simple animation without GSAP
         let x1 = 0, y1 = 0, x2 = 0, y2 = 0;
         let direction1 = 1, direction2 = 1;
-        
+
         setInterval(() => {
           // Blob 1
           if (x1 > 30 || x1 < 0) direction1 = -direction1;
           x1 += 0.5 * direction1;
           y1 -= 0.5 * direction1;
           bgBlob1.style.transform = `translate(${x1}px, ${y1}px)`;
-          
+
           // Blob 2
           if (x2 < -40 || x2 > 0) direction2 = -direction2;
           x2 -= 0.5 * direction2;
@@ -1265,21 +1323,21 @@
         // Simple animation without GSAP
         let scale1 = 1, scale2 = 1;
         let growing1 = true, growing2 = true;
-        
+
         setInterval(() => {
           // Circle 1
           if (scale1 >= 1.05) growing1 = false;
           if (scale1 <= 1) growing1 = true;
-          
+
           scale1 += growing1 ? 0.001 : -0.001;
           profileCircle1.style.transform = `scale(${scale1})`;
         }, 30);
-        
+
         setInterval(() => {
           // Circle 2
           if (scale2 >= 1.1) growing2 = false;
           if (scale2 <= 1) growing2 = true;
-          
+
           scale2 += growing2 ? 0.001 : -0.001;
           profileCircle2.style.transform = `scale(${scale2})`;
         }, 40);
@@ -1288,7 +1346,7 @@
       // Handle scroll events
       function handleScroll() {
         const scrollPosition = window.scrollY;
-        
+
         // Header transparency
         if (scrollPosition > 10) {
           header.classList.remove('py-4', 'bg-transparent');
@@ -1297,14 +1355,14 @@
           header.classList.add('py-4', 'bg-transparent');
           header.classList.remove('py-2', 'glass');
         }
-        
+
         // Animate sections on scroll
         const sections = document.querySelectorAll('section');
         sections.forEach(section => {
           const sectionTop = section.getBoundingClientRect().top;
           const sectionBottom = section.getBoundingClientRect().bottom;
           const windowHeight = window.innerHeight;
-          
+
           if (sectionTop < windowHeight * 0.75 && sectionBottom > 0) {
             section.classList.add('active');
           }
@@ -1312,80 +1370,81 @@
       }
 
       // Initialize
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('DOMContentLoaded', function () {
         // Check theme preference
         checkThemePreference();
-        
+
         // Setup logo animation
         setupLogoAnimation();
-        
+
         // Render initial skills and projects
         renderSkills();
         renderProjects();
-        
+
         // Event listeners
         mobileMenuButton.addEventListener('click', openMobileMenu);
         overlay.addEventListener('click', closeMobileMenu);
         themeToggle.addEventListener('click', toggleTheme);
         contactForm.addEventListener('submit', handleFormSubmit);
         window.addEventListener('scroll', handleScroll);
-        
+
         // Skill category buttons
         skillCategories.forEach(button => {
-          button.addEventListener('click', function() {
+          button.addEventListener('click', function () {
             const category = this.dataset.category;
-            
+
             // Update active button
             skillCategories.forEach(btn => btn.classList.remove('active', 'bg-primary', 'text-white'));
             skillCategories.forEach(btn => btn.classList.add('bg-muted', 'hover:bg-muted/80'));
             this.classList.add('active', 'bg-primary', 'text-white');
             this.classList.remove('bg-muted', 'hover:bg-muted/80');
-            
+
             // Render skills for selected category
             renderSkills(category);
           });
         });
-        
+
         // Project tab buttons
         projectTabs.forEach(tab => {
-          tab.addEventListener('click', function() {
+          tab.addEventListener('click', function () {
             const category = this.dataset.category;
-            
+
             // Update active tab
             projectTabs.forEach(t => t.classList.remove('active', 'bg-background'));
             this.classList.add('active', 'bg-background');
-            
+
             // Render projects for selected category
             renderProjects(category);
           });
         });
-        
+
         // Hero animations
         setTimeout(() => {
           heroText.style.opacity = '1';
           heroText.style.transform = 'translateY(0)';
         }, 300);
-        
+
         setTimeout(() => {
           heroImage.style.opacity = '1';
           heroImage.style.transform = 'scale(1)';
         }, 500);
-        
+
         setTimeout(() => {
           scrollDownBtn.style.opacity = '1';
         }, 1000);
-        
+
         // Start developer type cycling
         setInterval(cycleDeveloperTypes, 3000);
-        
+
         // Start animations
         animateBackgroundBlobs();
         animateProfileCircles();
-        
+
         // Initial scroll check
         handleScroll();
       });
     </script>
   </main>
 </body>
+
 </html>
